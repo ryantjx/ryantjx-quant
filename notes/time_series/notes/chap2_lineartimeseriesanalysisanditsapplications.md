@@ -1,16 +1,48 @@
 # Chapter 2 : Linear Time Series and its Applications
 
-## Key Formulas
+# Key Formulas
 
 Variance
 Var(aX + )
 
 Covariance
 
+### AR(p) Process
 
-## Notes
+#### Solving for AR(p)
+1. Analytical Solution
+   1. AR(1) process
+      - Let $X_t = \phi X_{t-1} + \varepsilon_t$, where $|\phi| < 1$ for stationarity.
+      - The ACF for AR(1) is:
+         $$\rho_k = \phi^k, \quad \text{for } k \geq 0$$
+         - Where $\rho_k$ is the autocorrelation at lag $k$.
 
-## Proofs
+   2. AR(2) process
+      - Let $X_t = \phi_1 X_{t-1} + \phi_2 X_{t-2} + \varepsilon_t$
+      - The ACF for AR(2) is:
+         $$\rho_1 = \frac{\phi_1}{1 - \phi_2}$$
+         $$\rho_2 = \phi_1\rho_1 + \phi_2$$
+      - For $k > 2$:
+         $$\rho_k = \phi_1\rho_{k-1} + \phi_2\rho_{k-2}$$
+   3. Higher-order AR(p) process
+      - For $X_t = \phi_1 X_{t-1} + \phi_2 X_{t-2} + \cdots + \phi_p X_{t-p} + \varepsilon_t$
+      - The ACF is given by the Yule-Walker equations:
+            $$\rho_k = \phi_1\rho_{k-1} + \phi_2\rho_{k-2} + \cdots + \phi_p\rho_{k-p}, \quad \text{for } k > 0$$
+      - With initial conditions:
+         $$\rho_0 = 1$$
+         $$\rho_{-k} = \rho_k \quad \text{(due to symmetry)}$$
+
+      - For $k \leq p$, we have $p$ equations with $p$ unknowns, which can be solved to get the first $p$ autocorrelations. For $k > p$, we can use the general equation recursively.
+
+      To solve these equations analytically:
+        1. For AR(1), it's straightforward.
+        2. For AR(2), you can solve the system of equations for $\rho_1$ and $\rho_2$, then use recursion.
+        3. For higher orders, you typically need to:
+            1.  Set up the system of Yule-Walker equations
+            2.  Solve them using matrix algebra
+            3.  Use the results to generate the rest of the ACF recursively
+
+# Proofs
 
 1. Proving -1 <= $\rho(k)$ <= 1 is the autocorrelation of a weakly stationary process. Let $X(t)$ be a weakly stationary process.
    1.  <b>Proof 1: Using Properties of Variance</b>
