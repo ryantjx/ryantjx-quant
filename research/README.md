@@ -18,6 +18,7 @@
 3. [Regression and Other Stories](https://www.cambridge.org/highereducation/books/regression-and-other-stories/DD20DD6C9057118581076E54E40C372C)
 4. [The Elements Of Statistical Learning: Data Mining, Inference, And Prediction, Second Edition](https://link.springer.com/book/10.1007/978-0-387-84858-7)
 5. [Analysis of Financial Time Series, 3rd Edition](https://www.wiley.com/en-gb/Analysis+of+Financial+Time+Series%2C+3rd+Edition-p-9780470414354)
+6. [Monte Carlo Methods in Financial Engineering](https://link.springer.com/book/10.1007/978-0-387-21617-1)
 
 ## 1.2 Machine Learning
 
@@ -65,3 +66,7 @@
 ## 3.2 Data Analysis
 1. [quantstats](https://github.com/ranaroussi/quantstats)
 2. [alphalens](https://github.com/quantopian/alphalens)
+
+## 3.2 Research
+1. [Auquan - Tutorials](https://github.com/Auquan/Tutorials)
+    - Trading strategies, math, and Time Series Analysis
